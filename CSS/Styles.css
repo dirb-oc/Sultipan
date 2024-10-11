@@ -5,6 +5,7 @@
     --Text: #ffffff; /* Color principal del texto */
     --Highlight: #FFC300; /* Color para detalles importantes, enlaces o botones */
     --Accent: #FFD966; /* Color de acento, para fondos suaves o botones */
+    --Footer: #2C2C2C;
 }
 
 *{
@@ -131,7 +132,7 @@ nav .links a:hover {
 
 /* Footer */
 footer {
-    background-color: var(--color-nav-bg);
+    background-color: var(--Footer);
     color: white;
     text-align: center;
     padding: 15px 0;
