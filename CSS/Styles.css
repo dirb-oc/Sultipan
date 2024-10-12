@@ -59,19 +59,23 @@ nav .links a:hover {
 
 /* Hero (sección de bienvenida) */
 .hero {
+    height: 85vh;
     text-align: center;
     padding: 50px 20px;
-    background-color: var(--color-primary);
+    background-color: black;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 100px;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 30px;
     margin-bottom: 30px;
 }
 
