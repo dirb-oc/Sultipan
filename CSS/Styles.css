@@ -4,7 +4,7 @@
     --NavBar: #2C2C2C;
     --Text: #ffffff; /* Color principal del texto */
     --Highlight: #FFC300; /* Color para detalles importantes, enlaces o botones */
-    --Accent: #FFD966; /* Color de acento, para fondos suaves o botones */
+    --Sultipan: #FFD966; /* Color de acento, para fondos suaves o botones */
     --Footer: #2C2C2C;
 }
 
@@ -57,7 +57,7 @@ nav .links a {
 }
 
 nav .links a:hover {
-    color: var(--Accent);
+    color: var(--Sultipan);
 }
 
 /* Hero (sección de bienvenida) */
@@ -82,6 +82,10 @@ nav .links a:hover {
     margin-bottom: 30px;
 }
 
+.Resaltar{
+    color: var(--Sultipan);
+}
+
 .btn-hero {
     background-color: var(--color-accent);
     color: white;
@@ -103,15 +107,15 @@ nav .links a:hover {
 }
 
 .productos h2 {
-    margin: 100px 40px;
+    margin: 100px 40px 50px 40px;
     font-size: 2.5em;
     color: var(--color-text);
 }
 
 .productos-grid {
-    margin: 50px 200px 20px 200px;
+    margin: 0px 200px 35px 200px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
 
@@ -121,7 +125,12 @@ nav .links a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 200px;
+    height: 300px;
+}
+
+.producto-item img {
+    width: 150px;
+    height: 220px;
 }
 
 .producto-item h3 {
@@ -162,6 +171,6 @@ footer {
     width: 20%;
 }
 
-.Contacto{
-
+.Contacto ul{
+    list-style: none;
 }
