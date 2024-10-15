@@ -144,8 +144,24 @@ footer {
     display: flex;
     background-color: var(--Footer);
     color: white;
-    text-align: center;
     margin-top: 50px;
-    height: 200px;
+    height: 300px;
     justify-content: space-between;
+}
+
+.Bloque{
+    width: 500px;
+    margin: 30px 20px 20px 40px  ;
+}
+
+.Informacion{
+    width: 45%;
+}
+
+.Redes{
+    width: 20%;
+}
+
+.Contacto{
+
 }
