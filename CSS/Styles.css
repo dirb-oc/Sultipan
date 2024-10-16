@@ -174,3 +174,64 @@ footer {
 .Contacto ul{
     list-style: none;
 }
+
+/* Estilo de las recetas en cascada */
+section.recetas {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.receta-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.receta-item:nth-child(even) {
+    flex-direction: row-reverse; /* Alterna las imágenes y el texto */
+}
+
+.receta-item:hover {
+    transform: scale(1.02);
+}
+
+.receta-item img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.receta-text {
+    width: 55%;
+}
+
+.receta-text h3 {
+    color: var(--color-secundario);
+}
+
+.receta-text p {
+    margin-bottom: 1rem;
+    color: var(--color-texto);
+}
+
+.btn-receta {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--color-boton);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-receta:hover {
+    background-color: var(--color-boton-hover);
+}
