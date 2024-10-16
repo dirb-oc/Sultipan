@@ -26,6 +26,7 @@ nav {
     padding: 10px 20px;
     width: 100%;
     height: 35px;
+    z-index: 1;
 }
 
 /* Estilo para el logo */
@@ -148,35 +149,22 @@ nav .links a:hover {
     border-radius: 8px;
 }
 
-/* Footer */
-footer {
-    display: flex;
-    background-color: var(--Footer);
-    color: white;
-    margin-top: 50px;
-    height: 300px;
-    justify-content: space-between;
-}
-
-.Bloque{
-    width: 500px;
-    margin: 30px 20px 20px 40px  ;
-}
-
-.Informacion{
-    width: 45%;
-}
-
-.Redes{
-    width: 20%;
-}
-
-.Contacto ul{
-    list-style: none;
-}
-
 /* Estilo de las recetas en cascada */
-section.recetas {
+.recetas {
+    background-color: var(--Sultipan);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recetas h2 {
+    margin: 75px 40px 0px 40px;
+    font-size: 2.5em;
+    color: var(--color-text);
+}
+
+.Recetas_Contenedor{
     padding: 3rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -192,10 +180,8 @@ section.recetas {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-}
-
-.receta-item:nth-child(even) {
-    flex-direction: row-reverse; /* Alterna las imágenes y el texto */
+    width: 850px;
+    height: 320px;
 }
 
 .receta-item:hover {
@@ -203,12 +189,12 @@ section.recetas {
 }
 
 .receta-item img {
-    width: 40%;
+    width: 250px;
     border-radius: 8px;
 }
 
 .receta-text {
-    width: 55%;
+    width: 50%;
 }
 
 .receta-text h3 {
@@ -234,4 +220,42 @@ section.recetas {
 
 .btn-receta:hover {
     background-color: var(--color-boton-hover);
+}
+
+/* Ubicacion */
+.Ubicacion{
+    height: 100vh;
+}
+
+.Ubicacion h2{
+        margin: 100px 40px 50px 40px;
+        font-size: 2.5em;
+        color: var(--color-text);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    background-color: var(--Footer);
+    color: white;
+    margin-top: 50px;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.Bloque{
+    width: 500px;
+    margin: 30px 20px 20px 40px  ;
+}
+
+.Informacion{
+    width: 45%;
+}
+
+.Redes{
+    width: 20%;
+}
+
+.Contacto ul{
+    list-style: none;
 }
