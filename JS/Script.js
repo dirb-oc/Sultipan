@@ -1,6 +1,7 @@
 // Recetas
 const recetas = [
     {
+        id: 1,
         nombre: "Pan de Masa Madre",
         imagen: "images/pan-masa-madre.jpg",
         ingredientes: [
@@ -62,56 +63,44 @@ const recetas = [
     }
 ];
 
-// Función para mostrar la receta por número
-function mostrarRecetaPorNumero() {
-    const numReceta = parseInt(document.getElementById("numReceta").value);
-    
-    // Verifica si el número de la receta es válido
-    if (numReceta >= 1 && numReceta <= recetas.length) {
-        const receta = recetas[numReceta - 1];  // Obtener la receta por número (index)
-        const container = document.getElementById("recetas-container");
+function obtenerRecetaPorID(Llave) {
+    return recetas.find(receta => receta.id == Llave);
+}
 
-        // Limpiar el contenedor antes de mostrar la receta
-        container.innerHTML = "";
+// Función para cargar la receta
+function cargarReceta() {
+    // Obtener el ID de la receta desde la URL (ejemplo: receta.html?id=1)
+    const params = new URLSearchParams(window.location.search);
+    const recetaId = parseInt(params.get('id'));
 
-        // Crear el elemento receta
-        const recetaDiv = document.createElement("div");
-        recetaDiv.classList.add("receta");
+    if (recetaId) {
+        const receta = obtenerRecetaPorID(recetaId);
+        if (receta) {
+            document.getElementById("receta-nombre").textContent = receta.nombre;
+            document.getElementById("receta-imagen").src = receta.imagen;
 
-        // Crear la imagen de la receta
-        const imagen = document.createElement("img");
-        imagen.src = receta.imagen;
-        imagen.alt = receta.nombre;
+            // Rellenar ingredientes
+            const ingredientesList = document.getElementById("receta-ingredientes");
+            receta.ingredientes.forEach(ingrediente => {
+                const li = document.createElement("li");
+                li.textContent = ingrediente;
+                ingredientesList.appendChild(li);
+            });
 
-        // Crear el contenido de la receta (nombre, ingredientes, procedimiento)
-        const contenidoDiv = document.createElement("div");
-
-        const nombre = document.createElement("h3");
-        nombre.textContent = receta.nombre;
-
-        const ingredientes = document.createElement("p");
-        ingredientes.innerHTML = "<strong>Ingredientes:</strong> " + receta.ingredientes.join(", ");
-
-        const procedimiento = document.createElement("p");
-        procedimiento.innerHTML = "<strong>Procedimiento:</strong> " + receta.procedimiento.join(" ");
-
-        const enlace = document.createElement("a");
-        enlace.href = receta.enlace;
-        enlace.textContent = "Ver receta completa";
-
-        // Agregar los elementos al contenido
-        contenidoDiv.appendChild(nombre);
-        contenidoDiv.appendChild(ingredientes);
-        contenidoDiv.appendChild(procedimiento);
-        contenidoDiv.appendChild(enlace);
-
-        // Agregar la imagen y el contenido al div de la receta
-        recetaDiv.appendChild(imagen);
-        recetaDiv.appendChild(contenidoDiv);
-
-        // Agregar la receta completa al contenedor
-        container.appendChild(recetaDiv);
+            // Rellenar procedimiento
+            const procedimientoList = document.getElementById("receta-procedimiento");
+            receta.procedimiento.forEach(paso => {
+                const li = document.createElement("li");
+                li.textContent = paso;
+                procedimientoList.appendChild(li);
+            });
+        } else {
+            document.body.innerHTML = "<h1>Receta no encontrada</h1>";
+        }
     } else {
-        alert("Por favor, ingresa un número de receta válido.");
+        document.body.innerHTML = "<h1>No se especificó una receta</h1>";
     }
 }
+
+// Llamar a la función para cargar la receta al iniciar la página
+window.onload = cargarReceta;
