@@ -17,6 +17,7 @@ body{
     background-color: var(--Background);
 }
 
+/*Navbar*/
 nav {
     display: flex;
     position: fixed;
@@ -29,7 +30,6 @@ nav {
     z-index: 1;
 }
 
-/* Estilo para el logo */
 nav .logo a {
     font-size: 24px;
     font-weight: bold;
@@ -39,7 +39,6 @@ nav .logo a {
 
 }
 
-/* Estilos de la lista del nav bar */
 nav .links {
     list-style: none;
     display: flex;
@@ -61,8 +60,8 @@ nav .links a:hover {
     color: var(--Sultipan);
 }
 
-/* Hero (sección de bienvenida) */
-.hero {
+/* Inicio (sección de bienvenida) */
+.Inicio {
     height: 90vh;
     display: flex;
     align-items: center;
@@ -73,12 +72,12 @@ nav .links a:hover {
     color: #fff;
 }
 
-.hero h1 {
+.Inicio h1 {
     font-size: 100px;
     margin-bottom: 10px;
 }
 
-.hero p {
+.Inicio p {
     font-size: 30px;
     margin-bottom: 30px;
 }
@@ -87,21 +86,7 @@ nav .links a:hover {
     color: var(--Sultipan);
 }
 
-.btn-hero {
-    background-color: var(--color-accent);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
-}
-
-.btn-hero:hover {
-    background-color: var(--color-primary);
-}
-
-/* Sección de productos */
+/* Productos */
 .productos {
     text-align: center;
     height: 100vh;
@@ -149,7 +134,7 @@ nav .links a:hover {
     border-radius: 8px;
 }
 
-/* Estilo de las recetas en cascada */
+/* Recetas */
 .recetas {
     background-color: var(--Sultipan);
     min-height: 100vh;
@@ -210,16 +195,11 @@ nav .links a:hover {
     display: inline-block;
     padding: 0.8rem 1.2rem;
     background-color: var(--color-boton);
-    color: #fff;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
-}
-
-.btn-receta:hover {
-    background-color: var(--color-boton-hover);
 }
 
 /* Ubicacion */
@@ -228,9 +208,9 @@ nav .links a:hover {
 }
 
 .Ubicacion h2{
-        margin: 100px 40px 50px 40px;
-        font-size: 2.5em;
-        color: var(--color-text);
+    margin: 100px 40px 50px 40px;
+    font-size: 2.5em;
+    color: var(--color-text);
 }
 
 /* Footer */
