@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFD966;
+    font-family: Arial, sans-serif;
+}
+
+.Recetas_Contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.Receta_Tarjeta {
+    background-color: white;
+    margin: 20px;
+    width: 300px;
+    position: relative; /* Para que el contenido oculto sea relativo a la tarjeta */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.Receta_Tarjeta:hover {
+    transform: scale(1.02); /* Efecto de zoom cuando pasas el ratón */
+}
+
+.Visible {
+    width: 100%;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.Receta_Titulo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.Oculto {
+    position: absolute;
+    top: 100%; /* Aparece justo debajo de la tarjeta */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 10; /* Asegura que aparezca por encima de otros elementos */
+}
+
+.Receta_Tarjeta:hover .Oculto {
+    opacity: 1;
+    visibility: visible;
+}
