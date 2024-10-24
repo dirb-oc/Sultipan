@@ -1,23 +1,28 @@
 :root {
-    --Background: #FFFFFF; /* Color de fondo principal */
-    --Secondary_background: #F2F2F2; /* Fondo secundario para secciones */
+    --Background: #FFFFFF;
+    /* Color de fondo principal */
+    --Secondary_background: #F2F2F2;
+    /* Fondo secundario para secciones */
     --NavBar: #2C2C2C;
-    --Text: #ffffff; /* Color principal del texto */
-    --Highlight: #FFC300; /* Color para detalles importantes, enlaces o botones */
-    --Sultipan: #FFD966; /* Color de acento, para fondos suaves o botones */
+    --Text: #ffffff;
+    /* Color principal del texto */
+    --Highlight: #FFC300;
+    /* Color para detalles importantes, enlaces o botones */
+    --Sultipan: #FFD966;
+    /* Color de acento, para fondos suaves o botones */
     --Footer: #2C2C2C;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 html {
     scroll-behavior: smooth;
-  }  
+}
 
-body{
+body {
     background-color: var(--Background);
 }
 
@@ -86,7 +91,7 @@ nav .links a:hover {
     margin-bottom: 30px;
 }
 
-.Resaltar{
+.Resaltar {
     color: var(--Sultipan);
 }
 
@@ -153,65 +158,100 @@ nav .links a:hover {
     color: var(--color-text);
 }
 
-.Recetas_Contenedor{
-    padding: 3rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.receta-item {
+.Recetas_Contenedor {
+    margin-top: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    width: 850px;
-    height: 320px;
+    justify-content: center;
+    gap: 20px;
 }
 
-.receta-item:hover {
+.Receta_Tarjeta {
+    background-color: white;
+    margin: 20px;
+    width: 450px;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.Receta_Tarjeta:hover {
     transform: scale(1.02);
+    /* Efecto de zoom cuando pasas el ratón */
+    cursor: pointer;
 }
 
-.receta-item img {
-    width: 250px;
-    border-radius: 8px;
+.Receta_Tarjeta img {
+    width: 100%;
+    display: block;
 }
 
-.receta-text {
-    width: 50%;
+.Receta_Titulo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 23px;
 }
 
-.receta-text h3 {
-    color: var(--color-secundario);
+.Receta_Titulo h3{
+    padding: 10px;
 }
 
-.receta-text p {
-    margin-bottom: 1rem;
-    color: var(--color-texto);
+.Oculto {
+    position: absolute;
+    top: 102%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Para centrar horizontalmente */
+    border-radius: 10px;
+    width: 95%;
+    background-color: white;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.btn-receta {
-    display: inline-block;
-    padding: 0.8rem 1.2rem;
-    background-color: var(--color-boton);
+.Receta_Tarjeta:hover .Oculto {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Receta_Tarjeta:hover img {
+    filter: blur(2px);
+}
+
+.Receta_Descripcion {
+    font-size: 20px;
+}
+
+.Receta_Descripcion button {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
-    text-decoration: none;
+    background-color: #FFD966;
+    color: #50401b;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+}
+
+.Receta_Descripcion .Elementos {
+    color: #BC8811;
+    font-weight: bold;
+    margin: 5px 15px;
 }
 
 /* Ubicacion */
-.Ubicacion{
+.Ubicacion {
     height: 100vh;
 }
 
-.Ubicacion h2{
+.Ubicacion h2 {
     margin: 100px 40px 50px 40px;
     font-size: 2.5em;
     color: var(--color-text);
@@ -227,19 +267,19 @@ footer {
     justify-content: space-between;
 }
 
-.Bloque{
+.Bloque {
     width: 500px;
-    margin: 30px 20px 20px 40px  ;
+    margin: 30px 20px 20px 40px;
 }
 
-.Informacion{
+.Informacion {
     width: 45%;
 }
 
-.Redes{
+.Redes {
     width: 20%;
 }
 
-.Contacto ul{
+.Contacto ul {
     list-style: none;
 }
