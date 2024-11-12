@@ -18,5 +18,3 @@ Bienvenido a la página web oficial de la panadería **Sultipan**. Este sitio we
 - **HTML5**: Estructura básica del sitio web.
 - **CSS3**: Estilos y diseño responsivo.
 - **JavaScript**: Interactividad y funciones dinámicas.
-
-Mejorar Todo
