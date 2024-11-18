@@ -1,4 +1,3 @@
-// Recetas
 const recetas = [
     {
         id: 1,
@@ -16,10 +15,10 @@ const recetas = [
             "Deja reposar la masa durante 4 horas.",
             "Precalienta el horno a 220°C.",
             "Hornea el pan durante 40 minutos o hasta que esté dorado."
-        ],
-        enlace: "recetas/pan-masa-madre.html"
+        ]
     },
     {
+        id: 2,
         nombre: "Croissant",
         imagen: "images/croissant.jpg",
         ingredientes: [
@@ -37,10 +36,10 @@ const recetas = [
             "Corta y forma los croissants.",
             "Deja reposar por 2 horas antes de hornear.",
             "Hornea a 190°C durante 15-20 minutos."
-        ],
-        enlace: "recetas/croissant.html"
+        ]
     },
     {
+        id: 3,
         nombre: "Bizcocho de Zanahoria",
         imagen: "images/bizcocho-zanahoria.jpg",
         ingredientes: [
@@ -58,23 +57,17 @@ const recetas = [
             "Agrega la zanahoria rallada y el aceite, mezcla bien.",
             "Incorpora la harina, el polvo de hornear y la sal.",
             "Vierte la mezcla en un molde y hornea durante 40 minutos."
-        ],
-        enlace: "recetas/bizcocho-zanahoria.html"
+        ]
     }
 ];
 
-function obtenerRecetaPorID(Llave) {
-    return recetas.find(receta => receta.id == Llave);
-}
-
 // Función para cargar la receta
 function cargarReceta() {
-    // Obtener el ID de la receta desde la URL (ejemplo: receta.html?id=1)
     const params = new URLSearchParams(window.location.search);
     const recetaId = parseInt(params.get('id'));
 
     if (recetaId) {
-        const receta = obtenerRecetaPorID(recetaId);
+        const receta = recetas.find(r => r.id === recetaId);
         if (receta) {
             document.getElementById("receta-nombre").textContent = receta.nombre;
             document.getElementById("receta-imagen").src = receta.imagen;
@@ -102,5 +95,5 @@ function cargarReceta() {
     }
 }
 
-// Llamar a la función para cargar la receta al iniciar la página
+// Llamar a la función al cargar la página
 window.onload = cargarReceta;
