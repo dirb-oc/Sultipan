@@ -1,15 +1,10 @@
 :root {
     --Background: #FFFFFF;
-    /* Color de fondo principal */
     --Secondary_background: #F2F2F2;
-    /* Fondo secundario para secciones */
     --NavBar: #2C2C2C;
     --Text: #ffffff;
-    /* Color principal del texto */
     --Highlight: #FFC300;
-    /* Color para detalles importantes, enlaces o botones */
     --Sultipan: #FFD966;
-    /* Color de acento, para fondos suaves o botones */
     --Footer: #2C2C2C;
 }
 
@@ -205,7 +200,6 @@ nav .links a:hover {
     top: 102%;
     left: 50%;
     transform: translateX(-50%);
-    /* Para centrar horizontalmente */
     border-radius: 10px;
     width: 95%;
     background-color: white;
@@ -236,7 +230,7 @@ nav .links a:hover {
     padding: 10px;
     border: none;
     background-color: #FFD966;
-    color: #50401b;
+    color: rgb(131, 117, 78);
     font-weight: bold;
 }
 
@@ -255,6 +249,22 @@ nav .links a:hover {
     margin: 100px 40px 50px 40px;
     font-size: 2.5em;
     color: var(--color-text);
+}
+
+
+/* Receta Page */
+.Centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Receta_Contenido{
+    width: 750px;
+    background:rgb(121, 89, 89);
+    margin: 115px 0;
+    padding: 20px;
+    border-radius: 0 25px 0 25px;
 }
 
 /* Footer */

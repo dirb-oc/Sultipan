@@ -3,18 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/Styles.css">
     <title>Recetas</title>
 </head>
 <body>
-    <div class="receta-container">
-        <img id="receta-imagen">
-        <h1 id="receta-nombre"></h1>
-        <h3>Ingredientes:</h3>
-        <ul id="receta-ingredientes"></ul>
-        <h3>Procedimiento:</h3>
-        <ol id="receta-procedimiento"></ol>
-    </div>
-    <script src="/JS/Script.js"></script>
+    <nav>
+        <div class="logo">
+            <a href="#">Sultipan</a>
+        </div>
+        <ul class="links">
+            <li><a href="/Index.html">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
 
+    <div class="Centrar">
+        <div class="Receta_Contenido">
+            <h1 id="receta-nombre"></h1>
+            <img id="receta-imagen">    
+            <h3>Ingredientes:</h3>
+            <ul id="receta-ingredientes"></ul>
+            <h3>Procedimiento:</h3>
+            <ol id="receta-procedimiento"></ol>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="Bloque Informacion">
+            <h2>Quienes somos</h2>
+            <p>
+                Desde 2005, he dedicado mi pasión a hornear el pan 
+                perfecto en Sultipan para los desayunos de mi 
+                comunidad. Cada día, selecciono los mejores 
+                ingredientes para ofrecerte calidad en cada bocado. 
+                ¿Te gustaría unirte a esta tradición que comparto 
+                con tanto orgullo?
+            </p>
+        </div>
+        <div class="Bloque Redes">
+            <h2>Redes</h2>
+            <p>Sigenos en Facebook</p>
+            <p>Sigenos en Instagram</p>
+        </div>
+        <div class="Bloque Contacto">
+            <h2>Informacion de Contacto</h2>
+            <ul>Ubicacion
+                <li>Diagonal 31B #24A 06 Sur</li>
+                <li>Carrera 19 # 4-86 Sur</li>
+                <li>Carrera 27 # 46-78 Sur</li>
+            </ul>
+            <ul>Telefonos
+                <li>3107578711</li>
+                <li>3207880920</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="/JS/Recetas_Selector.js"></script>
 </body>
 </html>
