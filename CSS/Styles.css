@@ -135,6 +135,24 @@ nav .links a:hover {
     color: #666;
 }
 
+.Productos_Button {
+    padding: 10px 20px;
+    color: var(--Highlight);
+    background-color: white;
+    text-decoration: none;
+    border: 3px solid var(--Sultipan);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.Productos_Button:hover {
+    background-color: var(--Sultipan);
+    color: white;
+}
 /* Recetas */
 .recetas {
     background-color: var(--Sultipan);
