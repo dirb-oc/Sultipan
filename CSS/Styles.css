@@ -102,26 +102,61 @@ nav .links a:hover {
     color: var(--color-text);
 }
 
-.productos-grid {
-    margin: 0px 200px 35px 200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+.Contenedor_Carrusel {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.Carrusel {
+    animation: turn 100s infinite linear;
+    transition: all 0.75s ease;
+    height: 600px;
+    width: 400%;
+}
+
+.Carrusel_Elemento {
+    display: flex;
+    justify-content: center;
+    float: left;
+    width: 25%;
+}
+
+.Carrusel_Elemento img{
+    height: 500px;
+    width: 800px;
+}
+
+@keyframes turn {
+    0%, 20% {
+        margin-left: 0;
+    }
+    25%, 45% {
+        margin-left: -100%;
+    }
+    50%, 70% {
+        margin-left: -200%;
+    }
+    75%, 95% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: 0;
+    }
 }
 
 .producto-item {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     text-align: center;
-    height: 300px;
+    height: 500px;
+    width: 1200px;
 }
 
 .producto-item img {
-    width: 150px;
-    height: 220px;
-    width: 100%;
+    width: 700px;
+    height: 400px;
     border-radius: 8px;
 }
 
