@@ -72,8 +72,15 @@ nav .links a:hover {
     justify-content: center;
     text-align: center;
     padding: 50px 20px;
-    background-color: black;
+    background-image: url('../IMG/Pan_copy.jpg');
+    background-size: cover; 
     color: #fff;
+}
+
+.Titulo_Principal{
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(5px);
+    width: 1000px;
 }
 
 .Inicio h1 {
@@ -103,27 +110,27 @@ nav .links a:hover {
 }
 
 .Contenedor_Carrusel {
-    margin: 0 auto;
     overflow: hidden;
 }
 
+/* Carrusel */
 .Carrusel {
-    animation: turn 100s infinite linear;
-    transition: all 0.75s ease;
-    height: 600px;
+    display: flex;
+    animation: turn 20s infinite linear;
     width: 400%;
 }
 
+/* Elementos del carrusel */
 .Carrusel_Elemento {
     display: flex;
     justify-content: center;
-    float: left;
-    width: 25%;
+    margin: -170px 0;
+    margin-bottom: -100px;
+    flex: 1 0 auto;
 }
 
 .Carrusel_Elemento img{
-    height: 500px;
-    width: 800px;
+    width: 75%;
 }
 
 @keyframes turn {
@@ -142,32 +149,6 @@ nav .links a:hover {
     100% {
         margin-left: 0;
     }
-}
-
-.producto-item {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    text-align: center;
-    height: 500px;
-    width: 1200px;
-}
-
-.producto-item img {
-    width: 700px;
-    height: 400px;
-    border-radius: 8px;
-}
-
-.producto-item h3 {
-    margin: 15px 0 10px;
-    font-size: 1.5em;
-}
-
-.producto-item p {
-    font-size: 1em;
-    color: #666;
 }
 
 .Productos_Button {
